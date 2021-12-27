@@ -10,17 +10,17 @@ interface ButtonProps {
 
 const SIZES = {
   sm: {
-    '--borderRadius': 2 + 'px',
+    '--borderRadius': 4 + 'px',
     '--fontSize': 16 / 16 + 'rem',
     '--padding': '4px 12px',
   },
   md: {
-    '--borderRadius': 2 + 'px',
+    '--borderRadius': 4 + 'px',
     '--fontSize': 18 / 16 + 'rem',
     '--padding': '12px 20px',
   },
   lg: {
-    '--borderRadius': 4 + 'px',
+    '--borderRadius': 8 + 'px',
     '--fontSize': 21 / 16 + 'rem',
     '--padding': '16px 32px',
   }
@@ -47,10 +47,11 @@ const Button: React.FC<ButtonProps> = ({ variant, size, children, className }) =
 
 const ButtonBase = styled.button`
   font-size: var(--fontSize);
-  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
   padding: var(--padding);
   border-radius: var(--borderRadius);
   border: 2px solid transparent;
+  cursor: pointer;
 
   &:focus {
     outline-color: ${COLORS.primary};
