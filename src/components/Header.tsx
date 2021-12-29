@@ -9,9 +9,9 @@ const Header = () => {
       </a>
       <nav>
         <NavList>
-          <NavListItem>Work</NavListItem>
+          {/* <NavListItem>Work</NavListItem>
           <NavListItem>About</NavListItem>
-          <NavListItem>Resume</NavListItem>
+          <NavListItem>Resume</NavListItem> */}
         </NavList>
       </nav>
     </Wrapper>

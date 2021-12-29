@@ -4,6 +4,7 @@ import Image from 'next/image'
 import styled from 'styled-components'
 import Button from '../src/components/Buttons'
 import Header from '../src/components/Header'
+import Footer from '../src/components/Footer'
 import MaxWidthWrapper from '../src/components/MaxWidthWrapper'
 import COLORS from '../src/constants/colors'
 
@@ -30,8 +31,16 @@ const Home: NextPage = () => {
         <HeroTextContainer>
           <h1>Hello! I am Davi.</h1>
           <p>A curiosity-driven, serial-listener and question-asker <b>UX Designer</b>, aiming to be the people channel for creating <b>delightful experiences</b>.</p>
-          <HeroCTA variant="fill" size="md">Check my work</HeroCTA>
+          <HeroCTA variant="fill" size="md">
+            <a href='https://drive.google.com/file/d/12ZB6nTmerpmspUrG4eHPVPl_FTR_fxc6/view?usp=sharing' rel="noreferrer" target="_blank">
+              View my CV / Resume
+            </a>
+          </HeroCTA>
         </HeroTextContainer>
+      </MaxWidthWrapper>
+
+      <MaxWidthWrapper>
+        <Footer />
       </MaxWidthWrapper>
     </Container>
   )
@@ -104,6 +113,11 @@ const CloudsContainer = styled.div`
 
 const HeroCTA = styled(Button)`
   align-self: flex-start;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 `
 
 export default Home
