@@ -27,8 +27,8 @@ const Wrapper = styled.footer`
   color: ${COLORS.primary};
   margin-top: 106px;
 
-  @media (max-width: 600px) {
-    margin-top: 213px;
+  @media (max-width: 1024px) {
+    margin-top: 165px;
   }
 `
 
