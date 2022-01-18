@@ -1,22 +1,34 @@
 import Image from "next/image";
+import Link from "next/link";
 import styled from "styled-components";
 
 const Header = () => {
   return (
     <Wrapper>
-      <a>
-        <Image src="/assets/logo.svg" width="72px" height="72px" alt="Website's Logo"/>
-      </a>
+      <Link href="/" passHref>
+        <div style={{ cursor: "pointer" }}>
+          <Image
+            src="/assets/logo.svg"
+            width="72px"
+            height="72px"
+            alt="Website's Logo"
+          ></Image>
+        </div>
+      </Link>
       <nav>
         <NavList>
-          {/* <NavListItem>Work</NavListItem>
-          <NavListItem>About</NavListItem>
-          <NavListItem>Resume</NavListItem> */}
+          <NavListItem>
+            <Link href="/work">Work</Link>
+          </NavListItem>
+          <NavListItem>
+            <Link href="/about">About</Link>
+          </NavListItem>
+          <NavListItem>Resume</NavListItem>
         </NavList>
       </nav>
     </Wrapper>
-  )
-}
+  );
+};
 
 const Wrapper = styled.header`
   display: flex;
@@ -29,7 +41,7 @@ const Wrapper = styled.header`
   a img {
     left: -28px !important;
   }
-`
+`;
 
 const NavList = styled.ul`
   display: flex;
@@ -37,7 +49,7 @@ const NavList = styled.ul`
   @media (max-width: 480px) {
     display: none;
   }
-`
+`;
 
 const NavListItem = styled.li`
   list-style-type: none;
@@ -45,6 +57,6 @@ const NavListItem = styled.li`
   :not(:last-of-type) {
     margin-right: 80px;
   }
-`
+`;
 
 export default Header;
