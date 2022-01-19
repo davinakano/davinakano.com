@@ -10,7 +10,9 @@ const BigImpactulText = ({ text }: BigImpactulTextProps) => {
 };
 
 const BigText = styled.h3`
-  font-size: 3rem;
+  font-size: 2rem;
+  margin: 0 auto;
+  max-width: 607px;
 `;
 
 export default BigImpactulText;

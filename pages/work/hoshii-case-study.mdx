@@ -1,4 +1,4 @@
-import Image from "next/image";
+import CaseStudyImage from "../../src/components/CaseStudyImage";
 import CaseStudyLayout from "../../src/components/CaseStudyLayout";
 import CaseStudyParagraph from "../../src/components/CaseStudyParagraph";
 import ProjectSummary from "../../src/components/ProjectSummary";
@@ -15,7 +15,7 @@ export const meta = {
   thumbnailURL: "/assets/hoshii/thumbnail.jpg",
 };
 
-<Image src="/assets/hoshii/banner.jpg" width={1100} height={410} />
+<CaseStudyImage src="/assets/hoshii/banner.jpg" width={1100} height={410} />
 
 <br />
 <br />
@@ -102,7 +102,11 @@ export const meta = {
 <br />
 <br />
 
-<Image src="/assets/hoshii/interview-post-its.png" width={1100} height={564} />
+<CaseStudyImage
+  src="/assets/hoshii/interview-post-its.png"
+  width={1100}
+  height={564}
+/>
 
 <br />
 <br />
@@ -134,12 +138,244 @@ export const meta = {
 <br />
 <br />
 
-<Image src="/assets/hoshii/persona.jpg" width={1100} height={608} />
+<CaseStudyImage src="/assets/hoshii/persona.jpg" width={1100} height={608} />
 
 <br />
 <br />
 
-~More to be added soon~
+<CaseStudyImage
+  src="/assets/hoshii/experience-map.jpg"
+  width={1100}
+  height={608}
+/>
+
+<br />
+<br />
+
+## Ideate
+
+<br />
+<br />
+
+<CaseStudyParagraph>
+  After considering multiple possible User Stories and grouping them into Epics,
+  it was clear that managing the Wishes themselves would be a core part of the
+  app. However, since the main difference of this project with the common TO-DO
+  app is the social aspect, I've decided to explore a "
+  <i>Group Wish Participation</i>" task flow.
+</CaseStudyParagraph>
+
+<br />
+<br />
+
+<CaseStudyImage src="/assets/hoshii/task-flow.jpg" width={1100} height={608} />
+
+<br />
+<br />
+
+<CaseStudyParagraph>
+  With a Task Flow at hand, it was time for getting inspiration on both the
+  overall mood of the application and some references of how to layout UI
+  components on a mobile screen. One of the main considerations was to look out
+  there for how Social Interactions are done in other apps.
+</CaseStudyParagraph>
+
+<br />
+<br />
+
+<video
+  autoPlay
+  muted
+  loop
+  style={{
+    width: "1164px",
+    height: "462px",
+    backgroundColor: "black",
+    borderRadius: "4px",
+  }}
+>
+  <source src="https://res.cloudinary.com/jammingtogether/video/upload/v1642630999/moodboard-scroll.mp4" />
+</video>
+
+<br />
+
+<p style={{ textAlign: "center" }}>
+  <a
+    href="https://projects.invisionapp.com/boards/ZD438L46TNY/"
+    rel="noreferrer"
+    target="_blank"
+  >
+    Click here for the full InVision inspiration board
+  </a>
+</p>
+
+<br />
+<br />
+
+<CaseStudyParagraph>
+  Before settling on a specific style, I did some sketches of my own to
+  consolidate some of the ideas extracted from the InVision inspiration board.
+  The goal here was to try to accomplish the proposed the task with the least
+  amount of steps.
+</CaseStudyParagraph>
+
+<br />
+<br />
+
+<video
+  autoPlay
+  muted
+  loop
+  style={{
+    width: "1164px",
+    height: "462px",
+    borderRadius: "4px",
+  }}
+>
+  <source src="https://res.cloudinary.com/jammingtogether/video/upload/v1642631003/sketches.mp4" />
+</video>
+
+<br />
+<br />
+
+<CaseStudyParagraph>
+  As a combination of the ideas from the exploratory sketches, I've arrived in a
+  "Solution Sketch" which would then serve as a guiding point for building a low
+  fidelity wireframe and start testing out with people that matched with the
+  participant criteria.
+</CaseStudyParagraph>
+
+<br />
+<br />
+
+<CaseStudyImage
+  src="/assets/hoshii/solution-sketch.jpg"
+  width={1100}
+  height={640}
+/>
+
+<br />
+<br />
+
+<CaseStudyImage
+  src="/assets/hoshii/first-prototype.png"
+  width={1100}
+  height={820}
+/>
+
+<br />
+<br />
+
+## Prototype & Test
+
+<br />
+<br />
+
+<CaseStudyParagraph>
+  The first round of testing was done with 5 people and the results were
+  underwhelming. All interviewees framed the social aspects of the app as an
+  events app. However, the intention with the "Group Wish" was to have a place
+  where other people could give you advice / encouragement on how to realize
+  your wish.
+</CaseStudyParagraph>
+
+<br />
+<br />
+
+- **T1** -> Locate / correlate the Social menu with Social capabilities
+- **T2** -> Understand the difference between Feed and Group Wishes tab
+- **T3** -> Understand that participating in a "Group Wish" subscribes the user to notifications about it
+
+<CaseStudyImage
+  src="/assets/hoshii/interview-results-1.jpg"
+  width={1100}
+  height={562}
+/>
+
+<br />
+<br />
+
+<CaseStudyParagraph>
+  Based on the interview results and the insights derived from the transcripts,
+  a Design Prioritization Matrix was created so that I could focus on the most
+  impactul changes for a second round of interviews.
+</CaseStudyParagraph>
+
+<br />
+<br />
+
+<CaseStudyImage
+  src="/assets/hoshii/design-prioritization-matrix-1.jpg"
+  width={1753}
+  height={795}
+/>
+
+<br />
+<br />
+
+<CaseStudyParagraph>
+  A new revised prototype was created to accomodate the changes that could be
+  done in time for the next deliverable deadline. Doing the project solo only
+  allowed me to tackle a few of the suggestions.
+</CaseStudyParagraph>
+
+<br />
+<br />
+
+<CaseStudyImage
+  src="/assets/hoshii/second-prototype.png"
+  width={1044}
+  height={868}
+/>
+
+<br />
+<br />
+
+<CaseStudyParagraph>
+  After the second round of interviews, it became clear that the changes paid
+  off. There was no confusion anymore around what Group Wishes actually meant
+  (now labelled as Public Wishes instead). All five new interviewees were able
+  to complete the tasks proposed.
+</CaseStudyParagraph>
+
+<br />
+<br />
+
+<CaseStudyImage
+  src="/assets/hoshii/interview-results-2.jpg"
+  width={1100}
+  height={562}
+/>
+
+<br />
+<br />
+
+<CaseStudyParagraph>
+  Yet, there were a few tweaks that could be done to further enhance the
+  experience. Some interviewees gave improvement suggestions and those are
+  outlined in the Design Prioritization Matrix below. The changes were applied
+  in the high fidelity prototype.
+</CaseStudyParagraph>
+
+<br />
+<br />
+
+## High Fidelity Prototype
+
+<br />
+<br />
+
+<CaseStudyParagraph>TODO</CaseStudyParagraph>
+
+<br />
+<br />
+
+## Branding
+
+<br />
+<br />
+
+<CaseStudyParagraph>TODO</CaseStudyParagraph>
 
 <br />
 <br />
