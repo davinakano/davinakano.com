@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import React from "react";
 import styled from "styled-components";
 
@@ -18,7 +19,12 @@ const ProjectCard = ({
   return (
     <Link href={projectURL} passHref>
       <Container>
-        <img src={thumbnailURL} alt={`${title} - ${description}`} />
+        <Image
+          src={thumbnailURL}
+          width={400}
+          height={200}
+          alt={`${title} - ${description}`}
+        />
         <TextContainer>
           <h3>{title}</h3>
           <p>{description}</p>
@@ -36,8 +42,8 @@ const Container = styled.div`
   cursor: pointer;
 
   img {
-    max-width: 300px;
-    height: 250px;
+    max-width: 400px;
+    height: 200px;
     object-fit: cover;
     border-radius: 5px 5px 0 0;
   }
@@ -49,7 +55,11 @@ const Container = styled.div`
 
 const TextContainer = styled.div`
   padding: 16px;
-  width: 300px;
+  max-width: 400px;
+
+  h3 {
+    margin-bottom: 16px;
+  }
 `;
 
 export default ProjectCard;

@@ -1,0 +1,149 @@
+import Image from "next/image";
+import CaseStudyLayout from "../../src/components/CaseStudyLayout";
+import CaseStudyParagraph from "../../src/components/CaseStudyParagraph";
+import ProjectSummary from "../../src/components/ProjectSummary";
+import FlexContainer from "../../src/components/FlexContainer";
+import BigStats from "../../src/components/BigStats";
+import BigImpactulText from "../../src/components/BigImpactulText";
+
+export const meta = {
+  author: "Davi Nakano",
+  title: "Hoshii — Social Bucket List Tracker",
+  description:
+    "An app aimed at helping young adults to get inspiration, track and accomplish bucket list goals collaboratively throughout their lives.",
+  projectURL: "/work/hoshii-case-study",
+  thumbnailURL: "/assets/hoshii/thumbnail.jpg",
+};
+
+<Image src="/assets/hoshii/banner.jpg" width={1100} height={410} />
+
+<br />
+<br />
+
+<ProjectSummary
+  role="UX Researcher, UI Designer"
+  process="Ideate, Empathize, Prototype, User Test"
+  duration="10 Weeks"
+  tools="Figma, InVision"
+/>
+
+---
+
+<br />
+<br />
+
+## Introduction
+
+<br />
+<br />
+
+<CaseStudyParagraph>
+  Hoshii is a capstone project developed during my UX Design Bootcamp at
+  BrainStation. Amongst other deliverables and lectures, we incrementally worked
+  on it for 10 weeks using our newly acquired skills. <br />
+  <br />
+</CaseStudyParagraph>
+
+<CaseStudyParagraph>
+  It all started with the thought of “<i>Memento Mori</i>” (latin for 'remember
+  that you [have to] die') which is an artistic or symbolic trope acting as a
+  reminder of the inevitability of death. It is natural to have hopes and dreams
+  throughout life but it is common that those get overthrown by the adult
+  working life, only to remember after it is often much harder to accomplish
+  them. We all have limited time in this life and it is virtually impossible to
+  do every single thing there is.
+</CaseStudyParagraph>
+
+<br />
+<br />
+
+## Research
+
+<br />
+<br />
+
+<CaseStudyParagraph>
+  In order to understand deeper about this topic and how it relates to other
+  people, I focused my efforts on analyzing news from different media outlets
+  and statistics from academic articles.
+</CaseStudyParagraph>
+
+<br />
+<br />
+
+<FlexContainer style={{ justifyContent: "space-evenly", flexWrap: "wrap" }}>
+  <BigStats
+    title="91.2%"
+    description="of surveyed participants have a bucket list"
+    sourceURL="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5946728/"
+  />
+  <BigStats
+    title="65.7%"
+    description="of elderly people reported having regrets in life"
+    sourceURL="https://www.researchgate.net/publication/26771555_Regret_in_Later_Life_Exploring_Relationships_between_Regret_Frequency_Secondary_Interpretive_Control_Beliefs_and_Health_in_Older_Individuals"
+  />
+</FlexContainer>
+
+<CaseStudyParagraph>
+  These articles, amongst other research materials, led me to the conclusion
+  that such desires can be deemed more difficult to be accomplished in an
+  advanced age, potentially causing regret and unsatisfaction towards life.
+</CaseStudyParagraph>
+
+<br />
+
+<CaseStudyParagraph>
+  Since the goal is to help people accomplish their goals while they are still
+  able to do so, I set out to interview working young adults that had a list of
+  items that they want to accomplish. <br /> The findings were grouped into
+  <i>"Pain Point"</i>, <i>"Behavior"</i> and <i>"Motivation"</i>.
+</CaseStudyParagraph>
+
+<br />
+<br />
+
+<Image src="/assets/hoshii/interview-post-its.png" width={1100} height={564} />
+
+<br />
+<br />
+
+<CaseStudyParagraph>
+  After going through the interview transcripts, I could extract three themes:
+</CaseStudyParagraph>
+
+<br />
+<br />
+
+- Goal tracking tools
+- Accountability during goal tracking
+- Source of inspiration for setting goals
+
+<br />
+<br />
+
+<CaseStudyParagraph>
+  From the primary and secondary research done so far, I was able to synthesize
+  them in the following <b>How Might We</b> question and <b>persona</b>:
+</CaseStudyParagraph>
+
+<br />
+<br />
+
+<BigImpactulText text="How might we increase the likelihood of goal-oriented young adults to check off their bucket list items?" />
+
+<br />
+<br />
+
+<Image src="/assets/hoshii/persona.jpg" width={1100} height={608} />
+
+<br />
+<br />
+
+~More to be added soon~
+
+<br />
+<br />
+
+export default ({ children }) => (
+  <CaseStudyLayout meta={meta}>{children}</CaseStudyLayout>
+);

@@ -23,7 +23,15 @@ const Header = () => {
           <NavListItem>
             <Link href="/about">About</Link>
           </NavListItem>
-          <NavListItem>Resume</NavListItem>
+          <NavListItem>
+            <a
+              href="https://drive.google.com/file/d/12ZB6nTmerpmspUrG4eHPVPl_FTR_fxc6/view?usp=sharing"
+              rel="noreferrer"
+              target="_blank"
+            >
+              Resume
+            </a>
+          </NavListItem>
         </NavList>
       </nav>
     </Wrapper>
