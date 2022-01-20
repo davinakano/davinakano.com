@@ -53,7 +53,7 @@ const Container = styled.div`
   color: ${COLORS.white};
 
   h2 {
-    max-width: 607px;
+    max-width: 756px;
     margin: 0 auto;
   }
 

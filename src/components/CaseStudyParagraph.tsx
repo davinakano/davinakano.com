@@ -4,7 +4,7 @@ const CaseStudyParagraph: React.FC = ({ children }) => {
   return (
     <p
       style={{
-        maxWidth: "60ch",
+        maxWidth: "75ch",
         margin: "0 auto",
       }}
     >

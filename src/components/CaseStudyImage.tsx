@@ -22,7 +22,7 @@ const CaseStudyImage = ({ alt, src, width, height }: CaseStudyImageProps) => {
 
 const ImageWrap = styled.div`
   margin: 0 auto;
-  max-width: 60ch;
+  max-width: 75ch;
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 `;
 
