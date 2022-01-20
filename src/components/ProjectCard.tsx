@@ -35,6 +35,7 @@ const ProjectCard = ({
 };
 
 const Container = styled.div`
+  display: flex;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   border-radius: 5px;
@@ -45,11 +46,19 @@ const Container = styled.div`
     max-width: 400px;
     height: 200px;
     object-fit: cover;
-    border-radius: 5px 5px 0 0;
+    border-radius: 5px 0 0 5px;
+
+    @media (max-width: 800px) {
+      border-radius: 5px 5px 0 0;
+    }
   }
 
   &:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  @media (max-width: 800px) {
+    display: block;
   }
 `;
 
