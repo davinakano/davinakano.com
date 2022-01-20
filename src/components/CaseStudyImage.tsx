@@ -1,5 +1,7 @@
 import Image from "next/image";
 import styled from "styled-components";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
 
 type CaseStudyImageProps = {
   alt: string;
@@ -11,15 +13,17 @@ type CaseStudyImageProps = {
 const CaseStudyImage = ({ alt, src, width, height }: CaseStudyImageProps) => {
   return (
     <ImageWrap>
-      <Image alt={alt} src={src} width={width} height={height} />
+      <Zoom>
+        <Image alt={alt} src={src} width={width} height={height} />
+      </Zoom>
     </ImageWrap>
   );
 };
 
-const ImageWrap = styled.span`
-  & > span {
-    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
-  }
+const ImageWrap = styled.div`
+  margin: 0 auto;
+  max-width: 60ch;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 `;
 
 export default CaseStudyImage;
