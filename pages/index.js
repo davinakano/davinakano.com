@@ -69,12 +69,12 @@ const Home = () => {
               thumbnailURL={HoshiiMeta.thumbnailURL}
               projectURL={HoshiiMeta.projectURL}
             />
-            {/* <ProjectCard
+            <ProjectCard
               title={PatientsFirstMeta.title}
               description={PatientsFirstMeta.description}
               thumbnailURL={PatientsFirstMeta.thumbnailURL}
               projectURL={PatientsFirstMeta.projectURL}
-            /> */}
+            />
           </CardsContainer>
         </SectionContainer>
       </MaxWidthWrapper>

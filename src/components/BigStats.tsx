@@ -20,7 +20,7 @@ const BigStats = ({ title, description, sourceURL }: BigStatsProps) => {
 const Container = styled.div`
   text-align: center;
   margin-bottom: 32px;
-  max-width: 220px;
+  max-width: 224px;
 
   h4 {
     font-size: 4rem;

@@ -7,6 +7,7 @@ import ProjectCard from "../src/components/ProjectCard";
 //
 // Featured projects
 import { meta as HoshiiMeta } from "./work/hoshii-case-study.mdx";
+import { meta as PatientsFirstMeta } from "./work/patients-first-case-study.mdx";
 
 const Work = () => {
   return (
@@ -19,12 +20,12 @@ const Work = () => {
           thumbnailURL={HoshiiMeta.thumbnailURL}
           projectURL={HoshiiMeta.projectURL}
         />
-        {/* <ProjectCard
-          title="Hoshii"
-          description="Lorem ipsum dor sit amet"
-          thumbnailURL="https://upload.wikimedia.org/wikipedia/commons/7/7c/Aspect_ratio_16_9_example.jpg"
-          projectURL="/"
-        /> */}
+        <ProjectCard
+          title={PatientsFirstMeta.title}
+          description={PatientsFirstMeta.description}
+          thumbnailURL={PatientsFirstMeta.thumbnailURL}
+          projectURL={PatientsFirstMeta.projectURL}
+        />
       </CardsContainer>
     </Layout>
   );
