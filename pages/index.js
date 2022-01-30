@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import Button from "../src/components/Buttons";
 import Header from "../src/components/Header";
 import Footer from "../src/components/Footer";
@@ -108,9 +108,20 @@ const Container = styled.div`
   }
 `;
 
+const floatAnimation = keyframes`
+  0% {
+    transform: translateY(0);
+    }
+  100% {
+    transform: translateY(10px);
+  }
+`;
+
 const HeroImageContainer = styled.div`
   position: absolute;
   right: -24px;
+  animation: ${floatAnimation} 1.75s infinite;
+  animation-direction: alternate;
 
   @media (max-width: 1150px) {
     display: flex;
