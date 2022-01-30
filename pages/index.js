@@ -14,6 +14,7 @@ import ProjectCard from "../src/components/ProjectCard";
 // Featured projects
 import { meta as HoshiiMeta } from "./work/hoshii-case-study.mdx";
 import { meta as PatientsFirstMeta } from "./work/patients-first-case-study.mdx";
+import { meta as StaplesMeta } from "./work/staples-heuristic-evaluation.mdx";
 
 const Home = () => {
   return (
@@ -74,6 +75,12 @@ const Home = () => {
               description={PatientsFirstMeta.description}
               thumbnailURL={PatientsFirstMeta.thumbnailURL}
               projectURL={PatientsFirstMeta.projectURL}
+            />
+            <ProjectCard
+              title={StaplesMeta.title}
+              description={StaplesMeta.description}
+              thumbnailURL={StaplesMeta.thumbnailURL}
+              projectURL={StaplesMeta.projectURL}
             />
           </CardsContainer>
         </SectionContainer>
