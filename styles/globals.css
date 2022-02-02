@@ -109,7 +109,23 @@ a:hover {
   color: black;
 }
 
+.patients-first-card button {
+  background-color: black;
+}
+
+.patients-first-card button:hover {
+  background-color: rgb(88, 88, 88);
+}
+
 .staples-card {
   background-color: #f0f0f0;
   color: black;
+}
+
+.staples-card button {
+  background-color: #cd2004;
+}
+
+.staples-card button:hover {
+  background-color: #e43015;
 }
