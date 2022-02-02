@@ -2,12 +2,16 @@ import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 import styled from "styled-components";
+import Button from "./Buttons";
 
 type ProjectCardProps = {
   title: string;
   description: string;
   thumbnailURL: string;
   projectURL: string;
+  className?: string;
+  ctaText?: string;
+  isDesktop?: boolean;
 };
 
 const ProjectCard = ({
@@ -15,60 +19,91 @@ const ProjectCard = ({
   description,
   thumbnailURL,
   projectURL,
+  className,
+  ctaText,
+  isDesktop,
 }: ProjectCardProps) => {
   return (
-    <Link href={projectURL} passHref>
-      <Container>
+    <Container className={className}>
+      <TextContainer>
+        <h3>{title}</h3>
+        <p>{description}</p>
+        <Link href={projectURL} passHref>
+          <div>
+            <MainCTA variant="fill" size="md">
+              {ctaText || "Read case study"}
+            </MainCTA>
+          </div>
+        </Link>
+      </TextContainer>
+      <ImageContainer>
         <Image
           src={thumbnailURL}
-          width={400}
-          height={200}
           alt={`${title} - ${description}`}
+          width={isDesktop ? 835 : 496}
+          height={isDesktop ? 704 : 1026}
         />
-        <TextContainer>
-          <h3>{title}</h3>
-          <p>{description}</p>
-        </TextContainer>
-      </Container>
-    </Link>
+      </ImageContainer>
+    </Container>
   );
 };
 
 const Container = styled.div`
-  display: flex;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  width: 100%;
+  border-radius: 48px;
+  padding: 64px;
   transition: 0.3s;
-  border-radius: 5px;
   margin-bottom: 32px;
-  cursor: pointer;
+  overflow: hidden;
 
-  img {
-    max-width: 400px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 5px 0 0 5px;
+  h3 {
+    font-size: 1.725rem;
+  }
 
-    @media (max-width: 800px) {
-      border-radius: 5px 5px 0 0;
-    }
+  p {
+    line-height: 1.725;
   }
 
   &:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   }
 
-  @media (max-width: 800px) {
-    display: block;
+  @media (max-width: 768px) {
+    padding: 32px;
   }
 `;
 
 const TextContainer = styled.div`
-  padding: 16px;
-  max-width: 400px;
+  max-width: 390px;
+
+  p {
+    max-width: 480px;
+  }
 
   h3 {
     margin-bottom: 16px;
   }
+`;
+
+const ImageContainer = styled.div`
+  position: absolute;
+  top: 48px;
+  right: 96px;
+  width: 30%;
+
+  @media (max-width: 768px) {
+    position: relative;
+    top: 16px;
+    right: 0;
+    width: 100%;
+  }
+`;
+
+const MainCTA = styled(Button)`
+  align-self: flex-start;
+  margin-top: 28px;
+  margin-bottom: 16px;
 `;
 
 export default ProjectCard;

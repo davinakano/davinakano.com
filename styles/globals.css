@@ -86,3 +86,30 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+/*
+  Extra: colors for the specific project cards
+*/
+
+.hoshii-card {
+  background-color: #143e57;
+  color: white;
+}
+
+.hoshii-card button {
+  background-color: darkcyan;
+}
+
+.hoshii-card button:hover {
+  background-color: rgb(0, 179, 179);
+}
+
+.patients-first-card {
+  background-color: #f0f0f0;
+  color: black;
+}
+
+.staples-card {
+  background-color: #f0f0f0;
+  color: black;
+}

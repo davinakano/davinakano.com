@@ -20,18 +20,23 @@ const Work = () => {
           description={HoshiiMeta.description}
           thumbnailURL={HoshiiMeta.thumbnailURL}
           projectURL={HoshiiMeta.projectURL}
+          className="hoshii-card"
         />
         <ProjectCard
           title={PatientsFirstMeta.title}
           description={PatientsFirstMeta.description}
           thumbnailURL={PatientsFirstMeta.thumbnailURL}
           projectURL={PatientsFirstMeta.projectURL}
+          className="patients-first-card"
         />
         <ProjectCard
           title={StaplesMeta.title}
           description={StaplesMeta.description}
           thumbnailURL={StaplesMeta.thumbnailURL}
           projectURL={StaplesMeta.projectURL}
+          isDesktop
+          className="staples-card"
+          ctaText="View report"
         />
       </CardsContainer>
     </Layout>
