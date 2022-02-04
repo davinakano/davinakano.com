@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import styled, { keyframes } from "styled-components";
 import Button from "../src/components/Buttons";
 import Header from "../src/components/Header";
@@ -48,15 +49,13 @@ const Home = () => {
             <b>UX Designer</b>, aiming to be the people channel for creating{" "}
             <b>delightful experiences</b>.
           </p>
-          <HeroCTA variant="fill" size="md">
-            <a
-              href="https://drive.google.com/file/d/1JtzLvKF4KUHCRrgKWSWQTmBtog0vU0xM/view?usp=sharing"
-              rel="noreferrer"
-              target="_blank"
-            >
-              View my CV / Resume
-            </a>
-          </HeroCTA>
+          <Link href="/work" passHref>
+            <div>
+              <HeroCTA variant="fill" size="md">
+                View projects
+              </HeroCTA>
+            </div>
+          </Link>
         </HeroTextContainer>
       </MaxWidthWrapper>
 
